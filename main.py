@@ -26,4 +26,3 @@ if manual_o_aleatorio == "manual":
 elif manual_o_aleatorio == "aleatorio":
     posicionar_barcos_aleatorio(tablero_nuevo,3)
     pprint.pprint(tablero_nuevo)
- 
