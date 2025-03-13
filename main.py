@@ -9,7 +9,7 @@ colocacion = True
 tablero_nuevo = nuevo_tablero(Tamano_tablero)
 pprint.pprint(tablero_nuevo)
 
-manual_o_fijo = input("Deseas colocar los barcos manualmente o que estén fijos?")
+manual_o_fijo = input("Deseas colocar los barcos manualmente o que estén posicionados de manera predeterminada?")
 if manual_o_fijo == "manual":
     while Numero_barcos > 0:
         Numero_barcos,colocacion=posicionar_barco_manual(tablero_nuevo)
@@ -22,5 +22,7 @@ if manual_o_fijo == "manual":
         if Numero_barcos == 0:
             print("Ya no quedan más barcos por colocar")
             break
-elif manual_o_fijo == "fijo":
+elif manual_o_fijo == "predeterminado":
     posicionar_barcos_fijos(tablero_nuevo)
+    pprint.pprint(tablero_nuevo)
+ 

@@ -1,4 +1,5 @@
 from variables import *
+import random
 
 def nuevo_tablero (Tamano):
     tablero = [[" " for i in range(Tamano)] for j in range(Tamano)]
