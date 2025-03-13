@@ -137,13 +137,23 @@ def posicionar_barco_manual (tablero):
     print (Numero_barcos,num_portaaviones,num_acorazados,num_destructores,num_fragatas,colocacion)
     return Numero_barcos,colocacion
     
-def posicionar_barcos_fijos(tablero):
-    tablero[3][3] = 'B'
-    tablero[4][3] = 'B'
-    tablero[5][3] = 'B'
-    tablero[6][3] = 'B'
-
-    tablero[1][0] = 'B'
-    tablero[1][1] = 'B'
-    tablero[1][2] = 'B'
-    tablero[1][3] = 'B'
+def posicionar_barcos_aleatorio(tablero,longitud):
+    #verificar_barco = False
+    #while not verificar_barco:
+    fila_random = random.randint(0,Tamano_tablero - 1)
+    columna_random = random.randint(0,Tamano_tablero - 1)
+    orientacion = random.choice ("N","S","E","O")
+    if orientacion == "N":
+        for eslora in range(longitud):
+            tablero[fila_random - eslora][columna_random] = "B"
+    elif orientacion == "E":
+        for eslora in range(longitud):
+            tablero[fila_random][columna_random + eslora] = "B"
+    elif orientacion == "S":
+        for eslora in range(longitud):
+            tablero[fila_random + eslora][columna_random] = "B"
+    elif orientacion == "O":
+        for eslora in range(longitud):
+            tablero[fila_random][columna_random - eslora] = "B"
+    
+    return tablero
