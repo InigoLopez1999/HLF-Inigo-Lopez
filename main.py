@@ -7,14 +7,21 @@ from funciones import *
 colocacion = True
 
 tablero_nuevo = nuevo_tablero(Tamano_tablero)
-pprint.pprint(tablero_nuevo)
 tablero_maquina = nuevo_tablero(Tamano_tablero)
+tablero_disparo_usuario = nuevo_tablero(Tamano_tablero)
+tablero_disparo_usuario = nuevo_tablero(Tamano_tablero)
+
+print("Bienvenido al juego Hundir La Flota:")
+print()
+print("Aquí está su tablero de juego vacío")
+print()
+pprint.pprint(tablero_nuevo)
+print()
+print("Aquí está el tablero de la máquina")
+print()
 pprint.pprint(tablero_maquina)
-tablero_disparo_usuario = nuevo_tablero(Tamano_tablero)
-tablero_disparo_usuario = nuevo_tablero(Tamano_tablero)
 
-
-manual_o_aleatorio = input("Deseas colocar los barcos manualmente o que estén posicionados de manera aleatoria?")
+manual_o_aleatorio = input("Desea colocar los barcos manualmente o que estén posicionados de manera aleatoria?")
 if manual_o_aleatorio == "manual":
     while Numero_barcos > 0:
         Numero_barcos,colocacion=posicionar_barco_manual(tablero_nuevo)
@@ -49,26 +56,41 @@ elif manual_o_aleatorio == "aleatorio":
         posicionar_fragatas_aleatorio(tablero_nuevo,1)
         #pprint.pprint(tablero_nuevo)
         num_fragatas = num_fragatas - 1
+    print()
+    print("Le presento su tablero con los barcos colocados")
+    print()
     pprint.pprint(tablero_nuevo)
 
 while num_portaaviones_maquina == 1:
     posicionar_poortaaviones_aleatorio(tablero_maquina,4)
-    #pprint.pprint(tablero_maquina)
     num_portaaviones_maquina = num_portaaviones_maquina - 1
 
 while num_acorazados_maquina >= 0:
     posicionar_acorazados_aleatorio(tablero_maquina,3)
-    #pprint.pprint(tablero_maquina)
     num_acorazados_maquina = num_acorazados_maquina - 1
 
 while num_destructores_maquina >= 0:
     posicionar_destructores_aleatorio(tablero_maquina,2)
-    #pprint.pprint(tablero_maquina)
     num_destructores_maquina = num_destructores_maquina - 1
 
 while num_fragatas_maquina >= 0:
     posicionar_fragatas_aleatorio(tablero_maquina,1)
-    #pprint.pprint(tablero_maquina)
     num_fragatas_maquina = num_fragatas_maquina - 1
+print()
+print("Le presento el tablero de la máquina con los barcos colocados")
+print()
 pprint.pprint(tablero_maquina)
+print()
 
+while True:
+    print("Este es el tablero donde va a realizar sus disparos")
+    print()
+    pprint.pprint(tablero_disparo_usuario)
+    print()
+    x = int(input("Introduzca la fila, por favor: "))
+    y = int(input("Introduza la columna, por favor: "))
+    acierto =  disparo(tablero_maquina,tablero_disparo_usuario,x,y)
+    if not acierto:
+        pprint.pprint(tablero_disparo_usuario)
+        break
+    

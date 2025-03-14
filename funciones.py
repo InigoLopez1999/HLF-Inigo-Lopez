@@ -137,10 +137,6 @@ def posicionar_barco_manual (tablero):
     print (Numero_barcos,num_portaaviones,num_acorazados,num_destructores,num_fragatas,colocacion)
     return Numero_barcos,colocacion
     
-
-
-
-
 def posicionar_poortaaviones_aleatorio(tablero, longitud):
     while True:
         fila_random = random.randint(0, Tamano_tablero - 1)
@@ -150,10 +146,10 @@ def posicionar_poortaaviones_aleatorio(tablero, longitud):
         if orientacion == "N":
             for eslora in range(longitud):
                 if fila_random - eslora < 0:
-                    print("El barco se sale del tablero")
+                    #print("El barco se sale del tablero")
                     break
                 elif tablero[fila_random - eslora][columna_random] == "D" or tablero[fila_random - eslora][columna_random] == "F" or tablero[fila_random - eslora][columna_random] == "A" or tablero[fila_random - eslora][columna_random] == "P":
-                    print("Ya hay un barco en esa posición")
+                    #print("Ya hay un barco en esa posición")
                     break
             else:
                 for eslora in range(longitud):
@@ -163,10 +159,10 @@ def posicionar_poortaaviones_aleatorio(tablero, longitud):
         elif orientacion == "E":
             for eslora in range(longitud):
                 if columna_random + eslora >= Tamano_tablero:
-                    print("El barco se sale del tablero")
+                    #print("El barco se sale del tablero")
                     break
                 elif tablero[fila_random][columna_random + eslora] == "D" or tablero[fila_random][columna_random + eslora] == "F" or tablero[fila_random][columna_random + eslora] == "A" or tablero[fila_random][columna_random + eslora] == "P":
-                    print("Ya hay un barco en esa posición")
+                    #print("Ya hay un barco en esa posición")
                     break
             else:
                 for eslora in range(longitud):
@@ -176,10 +172,10 @@ def posicionar_poortaaviones_aleatorio(tablero, longitud):
         elif orientacion == "S":
             for eslora in range(longitud):
                 if fila_random + eslora >= Tamano_tablero:
-                    print("El barco se sale del tablero")
+                    #print("El barco se sale del tablero")
                     break
                 elif tablero[fila_random + eslora][columna_random] == "D" or tablero[fila_random + eslora][columna_random] == "F" or tablero[fila_random + eslora][columna_random] == "A" or tablero[fila_random + eslora][columna_random] == "P":
-                    print("Ya hay un barco en esa posición")
+                    #print("Ya hay un barco en esa posición")
                     break
             else:
                 for eslora in range(longitud):
@@ -189,10 +185,10 @@ def posicionar_poortaaviones_aleatorio(tablero, longitud):
         elif orientacion == "O":
             for eslora in range(longitud):
                 if columna_random - eslora < 0:
-                    print("El barco se sale del tablero")
+                    #print("El barco se sale del tablero")
                     break
                 elif tablero[fila_random][columna_random - eslora] == "D" or tablero[fila_random][columna_random - eslora] == "F" or tablero[fila_random][columna_random - eslora] == "A" or tablero[fila_random][columna_random - eslora] == "P":
-                    print("Ya hay un barco en esa posición")
+                    #print("Ya hay un barco en esa posición")
                     break
             else:
                 for eslora in range(longitud):
@@ -208,10 +204,10 @@ def posicionar_acorazados_aleatorio(tablero, longitud):
         if orientacion == "N":
             for eslora in range(longitud):
                 if fila_random - eslora < 0:
-                    print("El barco se sale del tablero")
+                    #print("El barco se sale del tablero")
                     break
                 elif tablero[fila_random - eslora][columna_random] == "D" or tablero[fila_random - eslora][columna_random] == "F" or tablero[fila_random - eslora][columna_random] == "A" or tablero[fila_random - eslora][columna_random] == "P":
-                    print("Ya hay un barco en esa posición")
+                    #print("Ya hay un barco en esa posición")
                     break
             else:
                 for eslora in range(longitud):
@@ -221,10 +217,10 @@ def posicionar_acorazados_aleatorio(tablero, longitud):
         elif orientacion == "E":
             for eslora in range(longitud):
                 if columna_random + eslora >= Tamano_tablero:
-                    print("El barco se sale del tablero")
+                    #print("El barco se sale del tablero")
                     break
                 elif tablero[fila_random][columna_random + eslora] == "D" or tablero[fila_random][columna_random + eslora] == "F" or tablero[fila_random][columna_random + eslora] == "A" or tablero[fila_random][columna_random + eslora] == "P":
-                    print("Ya hay un barco en esa posición")
+                    #print("Ya hay un barco en esa posición")
                     break
             else:
                 for eslora in range(longitud):
@@ -234,10 +230,10 @@ def posicionar_acorazados_aleatorio(tablero, longitud):
         elif orientacion == "S":
             for eslora in range(longitud):
                 if fila_random + eslora >= Tamano_tablero:
-                    print("El barco se sale del tablero")
+                    #print("El barco se sale del tablero")
                     break
                 elif tablero[fila_random + eslora][columna_random] == "D" or tablero[fila_random + eslora][columna_random] == "F" or tablero[fila_random + eslora][columna_random] == "A" or tablero[fila_random + eslora][columna_random] == "P":
-                    print("Ya hay un barco en esa posición")
+                    #print("Ya hay un barco en esa posición")
                     break
             else:
                 for eslora in range(longitud):
@@ -247,10 +243,10 @@ def posicionar_acorazados_aleatorio(tablero, longitud):
         elif orientacion == "O":
             for eslora in range(longitud):
                 if columna_random - eslora < 0:
-                    print("El barco se sale del tablero")
+                    #print("El barco se sale del tablero")
                     break
                 elif tablero[fila_random][columna_random - eslora] == "D" or tablero[fila_random][columna_random - eslora] == "F" or tablero[fila_random][columna_random - eslora] == "A" or tablero[fila_random][columna_random - eslora] == "P":
-                    print("Ya hay un barco en esa posición")
+                    #print("Ya hay un barco en esa posición")
                     break
             else:
                 for eslora in range(longitud):
@@ -266,10 +262,10 @@ def posicionar_destructores_aleatorio(tablero, longitud):
         if orientacion == "N":
             for eslora in range(longitud):
                 if fila_random - eslora < 0:
-                    print("El barco se sale del tablero")
+                    #print("El barco se sale del tablero")
                     break
                 elif tablero[fila_random - eslora][columna_random] == "D" or tablero[fila_random - eslora][columna_random] == "F" or tablero[fila_random - eslora][columna_random] == "A" or tablero[fila_random - eslora][columna_random] == "P":
-                    print("Ya hay un barco en esa posición")
+                    #print("Ya hay un barco en esa posición")
                     break
             else:
                 for eslora in range(longitud):
@@ -279,10 +275,10 @@ def posicionar_destructores_aleatorio(tablero, longitud):
         elif orientacion == "E":
             for eslora in range(longitud):
                 if columna_random + eslora >= Tamano_tablero:
-                    print("El barco se sale del tablero")
+                    #print("El barco se sale del tablero")
                     break
                 elif tablero[fila_random][columna_random + eslora] == "D" or tablero[fila_random][columna_random + eslora] == "F" or tablero[fila_random][columna_random + eslora] == "A" or tablero[fila_random][columna_random + eslora] == "P":
-                    print("Ya hay un barco en esa posición")
+                    #print("Ya hay un barco en esa posición")
                     break
             else:
                 for eslora in range(longitud):
@@ -292,10 +288,10 @@ def posicionar_destructores_aleatorio(tablero, longitud):
         elif orientacion == "S":
             for eslora in range(longitud):
                 if fila_random + eslora >= Tamano_tablero:
-                    print("El barco se sale del tablero")
+                    #print("El barco se sale del tablero")
                     break
                 elif tablero[fila_random + eslora][columna_random] == "D" or tablero[fila_random + eslora][columna_random] == "F" or tablero[fila_random + eslora][columna_random] == "A" or tablero[fila_random + eslora][columna_random] == "P":
-                    print("Ya hay un barco en esa posición")
+                    #print("Ya hay un barco en esa posición")
                     break
             else:
                 for eslora in range(longitud):
@@ -305,10 +301,10 @@ def posicionar_destructores_aleatorio(tablero, longitud):
         elif orientacion == "O":
             for eslora in range(longitud):
                 if columna_random - eslora < 0:
-                    print("El barco se sale del tablero")
+                    #print("El barco se sale del tablero")
                     break
                 elif tablero[fila_random][columna_random - eslora] == "D" or tablero[fila_random][columna_random - eslora] == "F" or tablero[fila_random][columna_random - eslora] == "A" or tablero[fila_random][columna_random - eslora] == "P":
-                    print("Ya hay un barco en esa posición")
+                    #print("Ya hay un barco en esa posición")
                     break
             else:
                 for eslora in range(longitud):
@@ -324,10 +320,10 @@ def posicionar_fragatas_aleatorio(tablero, longitud):
         if orientacion == "N":
             for eslora in range(longitud):
                 if fila_random - eslora < 0:
-                    print("El barco se sale del tablero")
+                    #print("El barco se sale del tablero")
                     break
                 elif tablero[fila_random - eslora][columna_random] == "D" or tablero[fila_random - eslora][columna_random] == "F" or tablero[fila_random - eslora][columna_random] == "A" or tablero[fila_random - eslora][columna_random] == "P":
-                    print("Ya hay un barco en esa posición")
+                    #print("Ya hay un barco en esa posición")
                     break
             else:
                 for eslora in range(longitud):
@@ -337,10 +333,10 @@ def posicionar_fragatas_aleatorio(tablero, longitud):
         elif orientacion == "E":
             for eslora in range(longitud):
                 if columna_random + eslora >= Tamano_tablero:
-                    print("El barco se sale del tablero")
+                    #print("El barco se sale del tablero")
                     break
                 elif tablero[fila_random][columna_random + eslora] == "D" or tablero[fila_random][columna_random + eslora] == "F" or tablero[fila_random][columna_random + eslora] == "A" or tablero[fila_random][columna_random + eslora] == "P":
-                    print("Ya hay un barco en esa posición")
+                    #print("Ya hay un barco en esa posición")
                     break
             else:
                 for eslora in range(longitud):
@@ -350,10 +346,10 @@ def posicionar_fragatas_aleatorio(tablero, longitud):
         elif orientacion == "S":
             for eslora in range(longitud):
                 if fila_random + eslora >= Tamano_tablero:
-                    print("El barco se sale del tablero")
+                    #print("El barco se sale del tablero")
                     break
                 elif tablero[fila_random + eslora][columna_random] == "D" or tablero[fila_random + eslora][columna_random] == "F" or tablero[fila_random + eslora][columna_random] == "A" or tablero[fila_random + eslora][columna_random] == "P":
-                    print("Ya hay un barco en esa posición")
+                    #print("Ya hay un barco en esa posición")
                     break
             else:
                 for eslora in range(longitud):
@@ -363,10 +359,10 @@ def posicionar_fragatas_aleatorio(tablero, longitud):
         elif orientacion == "O":
             for eslora in range(longitud):
                 if columna_random - eslora < 0:
-                    print("El barco se sale del tablero")
+                    #print("El barco se sale del tablero")
                     break
                 elif tablero[fila_random][columna_random - eslora] == "D" or tablero[fila_random][columna_random - eslora] == "F" or tablero[fila_random][columna_random - eslora] == "A" or tablero[fila_random][columna_random - eslora] == "P":
-                    print("Ya hay un barco en esa posición")
+                    #print("Ya hay un barco en esa posición")
                     break
             else:
                 for eslora in range(longitud):
@@ -374,16 +370,23 @@ def posicionar_fragatas_aleatorio(tablero, longitud):
                 return True
 
 def disparo(tablero,tablero_mostrar,x,y):
-    if tablero[x][y] == 'B':
+    if tablero[x][y] == 'P' or tablero[x][y] == 'D' or tablero[x][y] == 'A' or tablero[x][y] == 'F':
         print("Tocado")
+        print()
         tablero[x][y] = "X"
-        tablero_mostrar[i][j] = "X"
+        tablero_mostrar[x][y] = "X"
         return True
     elif tablero[x][y] == " ":
         print("Agua")
+        print()
+        print("Es el turno de tu oponente")
+        print()
         tablero[x][y] = "O"
-        tablero_mostrar[x][y] = "X"
+        tablero_mostrar[x][y] = "O"
         return False
     else:
         print("Ya habías efectuado un disparo en esa posición")
+        print()
+        print("Es el turno de tu oponente")
+        print()
         return False
