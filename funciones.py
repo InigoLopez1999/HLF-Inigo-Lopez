@@ -372,3 +372,18 @@ def posicionar_fragatas_aleatorio(tablero, longitud):
                 for eslora in range(longitud):
                     tablero[fila_random][columna_random - eslora] = "F"
                 return True
+
+def disparo(tablero,tablero_mostrar,x,y):
+    if tablero[x][y] == 'B':
+        print("Tocado")
+        tablero[x][y] = "X"
+        tablero_mostrar[i][j] = "X"
+        return True
+    elif tablero[x][y] == " ":
+        print("Agua")
+        tablero[x][y] = "O"
+        tablero_mostrar[x][y] = "X"
+        return False
+    else:
+        print("Ya habías efectuado un disparo en esa posición")
+        return False
