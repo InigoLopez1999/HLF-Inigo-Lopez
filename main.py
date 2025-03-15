@@ -13,16 +13,18 @@ tablero_disparo_maquina = nuevo_tablero(Tamano_tablero)
 
 print("Bienvenido al juego Hundir La Flota:")
 print()
-time.sleep(2)
+nombre_usuario = input("Introduzca su nombre si es tan amable:")
+time.sleep(3)
+print(f"Mucho gusto {nombre_usuario}. En este juego le proporcionaremos un tablero vacío de 10 x 10 donde podrá colocar un total de 10 barcos con las siguientes características:")
+time.sleep(3)
+print("-4 fragatas de 1 de eslora \n-3 destructores de 2 de eslora \n-2 acorazados de 3 de eslora \n-1 portaaviones de 4 de eslora")
+print()
+time.sleep(5)
+print("Le daremos la posibilidad de poder colocar sus barcos de forma manual en el tablero o bien dejar que se coloquen aleatoriamente")
+time.sleep(3)
 print("Aquí está su tablero de juego vacío")
 print()
 pprint.pprint(tablero_nuevo)
-time.sleep(5)
-os.system("cls")
-print()
-print("Aquí está el tablero de la máquina")
-print()
-pprint.pprint(tablero_maquina)
 time.sleep(5)
 os.system("cls")
 
@@ -85,14 +87,6 @@ while num_destructores_maquina >= 1:
 while num_fragatas_maquina >= 1:
     posicionar_fragatas_aleatorio(tablero_maquina,1)
     num_fragatas_maquina = num_fragatas_maquina - 1
-print()
-print("Le presento el tablero de la máquina con los barcos colocados")
-time.sleep(1)
-print()
-pprint.pprint(tablero_maquina)
-time.sleep(3)
-print()
-os.system("cls")
 
 
 while hay_barcos(tablero_nuevo) and hay_barcos(tablero_maquina):
@@ -102,7 +96,7 @@ while hay_barcos(tablero_nuevo) and hay_barcos(tablero_maquina):
     print()
     time.sleep(2)
     while True:
-        trampas = input("Quieres que imprima el tablero de la máquina para acelerar la partida?")
+        trampas = input("Quiere que imprima el tablero de la máquina para acelerar la partida?")
         if trampas == "si":
             pprint.pprint(tablero_maquina)
             time.sleep(5)
