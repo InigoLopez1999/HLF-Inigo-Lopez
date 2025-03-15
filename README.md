@@ -1,4 +1,4 @@
 # Proyecto Hundir La Flota
-## Realizado por Iñigo López
+### Realizado por Iñigo López Ayala
 
-###Archivo variables.py
+1. Archivo variables.py
