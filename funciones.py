@@ -1,5 +1,7 @@
 from variables import *
 import random
+import pprint
+import time
 
 def nuevo_tablero (Tamano):
     tablero = [[" " for i in range(Tamano)] for j in range(Tamano)]
@@ -372,21 +374,30 @@ def posicionar_fragatas_aleatorio(tablero, longitud):
 def disparo(tablero,tablero_mostrar,x,y):
     if tablero[x][y] == 'P' or tablero[x][y] == 'D' or tablero[x][y] == 'A' or tablero[x][y] == 'F':
         print("Tocado")
+        time.sleep(2)
         print()
         tablero[x][y] = "X"
         tablero_mostrar[x][y] = "X"
+        pprint.pprint(tablero_mostrar)
         return True
     elif tablero[x][y] == " ":
         print("Agua")
-        print()
-        print("Es el turno de tu oponente")
+        time.sleep(2)
         print()
         tablero[x][y] = "O"
         tablero_mostrar[x][y] = "O"
+        pprint.pprint(tablero_mostrar)
+        print()
         return False
     else:
         print("Ya habías efectuado un disparo en esa posición")
-        print()
-        print("Es el turno de tu oponente")
+        time.sleep(2)
         print()
         return False
+
+def hay_barcos(tablero):
+    for fila in tablero:
+        for celda in fila:
+            if celda in ("A", "P", "F", "D"):
+                return True  # Hay al menos un barco, el juego sigue
+    return False  # No hay barcos, el juego termina
