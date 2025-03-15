@@ -1,2 +1,4 @@
-# HLF-Inigo-Lopez
-Repositorio para ir subiendo todos los archivos .py del Hundir la Flota
+# Proyecto Hundir La Flota
+## Realizado por Iñigo López
+
+###Archivo variables.py
