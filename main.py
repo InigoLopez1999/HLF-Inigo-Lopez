@@ -100,13 +100,25 @@ while hay_barcos(tablero_nuevo) and hay_barcos(tablero_maquina):
         y = int(input("Introduza la columna, por favor: "))
         acierto =  disparo(tablero_maquina,tablero_disparo_usuario,x,y)
         contador = contador + 1
-        if contador == 3:
+        if contador >=3:
             ganar_auto = input("Deseas ganar la partida?")
             if ganar_auto == "si":
                 for linea in range(len(tablero_maquina)):
                     for letra in range(len(tablero_maquina[linea])):
                         if tablero_maquina[linea][letra] in ("A","P","D","F"):
                             tablero_maquina[linea][letra] = "X"
+            elif ganar_auto == "no":
+                time.sleep(2)
+                if not hay_barcos(tablero_maquina):
+                     break
+                if not acierto:
+                    print("Es el turno de tu oponente")
+                    time.sleep(1)
+                    os.system("cls")
+                    break
+                time.sleep(3)
+                os.system("cls")
+                
         time.sleep(2)
         if not hay_barcos(tablero_maquina):
             break
