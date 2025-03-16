@@ -344,8 +344,8 @@ def disparo(tablero,tablero_mostrar,x,y):
         print("Tocado")
         time.sleep(2)
         print()
-        if (tablero[x + 1][y] == " " or tablero[x + 1][y] == "X") and (tablero[x - 1][y] == " " or tablero[x - 1][y] == "X") and (tablero[x][y + 1] == " " or tablero[x][y + 1] == "X") and (tablero[x][y - 1] == " " or tablero[x][y - 1] == "X"):
-            print("Tocado y hundido")
+        #if (tablero[x + 1][y] == " " or tablero[x + 1][y] == "X") and (tablero[x - 1][y] == " " or tablero[x - 1][y] == "X") and (tablero[x][y + 1] == " " or tablero[x][y + 1] == "X") and (tablero[x][y - 1] == " " or tablero[x][y - 1] == "X"):
+            #print("Tocado y hundido")
         tablero[x][y] = "X"
         tablero_mostrar[x][y] = "X"
         pprint.pprint(tablero_mostrar)
