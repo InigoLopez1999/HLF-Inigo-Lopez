@@ -32,12 +32,10 @@ manual_o_aleatorio = input("Desea colocar los barcos manualmente o que estén po
 if manual_o_aleatorio == "manual":
     while Numero_barcos > 0:
         Numero_barcos,colocacion=posicionar_barco_manual(tablero_nuevo)
-        print(Numero_barcos)
         if colocacion == True:
             pprint.pprint(tablero_nuevo)
         else:
             continue
-
         if Numero_barcos == 0:
             print("Ya no quedan más barcos por colocar")
             break

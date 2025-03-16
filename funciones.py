@@ -346,6 +346,8 @@ def disparo(tablero,tablero_mostrar,x,y):
         print()
         #if (tablero[x + 1][y] == " " or tablero[x + 1][y] == "X") and (tablero[x - 1][y] == " " or tablero[x - 1][y] == "X") and (tablero[x][y + 1] == " " or tablero[x][y + 1] == "X") and (tablero[x][y - 1] == " " or tablero[x][y - 1] == "X"):
             #print("Tocado y hundido")
+        # Estas líneas de código funcionan y comprueban que el barco esté hundido correctamente, sin embargo al no poder implementar una manera de que
+        # los barcos estén separados entre sí por agua siempre, no he podido darle un uso a este código.
         tablero[x][y] = "X"
         tablero_mostrar[x][y] = "X"
         pprint.pprint(tablero_mostrar)
