@@ -18,8 +18,29 @@
 
 2. #### Archivo funciones.py
 
-    * ##### Función de creación del tablero
+    * ##### *Función de creación del tablero*
 
         * Esta función se define con un único argumento, siendo el tamaño del tablero (Tamano_tablero)
-        * Se crea una variable llamada tablero como una lista de listas en función de la variable Tama
+        * Se crea una variable llamada tablero como una lista de listas en función de la variable Tamano_tablero
+    
+    * ##### *Función de colocación de barcos de manera manual*
+
+        * Esta función nos permite colocar cada barco de manera manual en la ubicación que desee el usuario
+        * Esta función posee un único argumento de entrada, el tablero del usuario
+        * Lo primero que hacemos es globalizar las variables en el archivo variables.py para poder utilizarlas en cualquier instancia del archivo
+        * Se crea una variable colocacion como un booleano inicializado a True. Cuando colocacion sea False será cuando no queden barcos de cierto tipo y se desee colocar otro, no habiendo ya barcos de ese tipo por colocar.
+        * A través de un input se pregunta al usuario qué barco desea colocar en el tablero
+        * A continuación, mediante un bucle while, se asegura que la entrada sea robusta frente a input ajenos a los tipos de barcos
+        
+        1. Si el usuario elige fragata:
+
+            - En caso de que queden fragatas por colocar, se piden dos coordenadas x e y para poder poner la fragata donde quiera el usuario
+            - Se resta la cantidad de fragatas en 1
+            - Cuando llegue el número de fragatas a 0 y se desee colocar otra, saltará un mensaje que indique la ausencia de dicho barco y se devuelve
+            colocacion = False. Las consecuencias de este False se explicarán en la sección de main.py
+        
+        2. Si el usuario elige destructor:
+
+            - 
+            
 
