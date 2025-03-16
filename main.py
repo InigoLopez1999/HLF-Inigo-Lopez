@@ -86,7 +86,7 @@ while num_fragatas_maquina >= 1:
     posicionar_fragatas_aleatorio(tablero_maquina,1)
     num_fragatas_maquina = num_fragatas_maquina - 1
 
-
+contador = 0
 while hay_barcos(tablero_nuevo) and hay_barcos(tablero_maquina):
     print("Este es el tablero donde va a realizar sus disparos")
     print()
@@ -94,38 +94,33 @@ while hay_barcos(tablero_nuevo) and hay_barcos(tablero_maquina):
     print()
     time.sleep(2)
     while True:
-        trampas = input("Quiere que imprima el tablero de la máquina para acelerar la partida?")
-        if trampas == "si":
-            pprint.pprint(tablero_maquina)
-            time.sleep(5)
+        time.sleep(5)
+        os.system("cls")
+        x = int(input("Introduzca la fila, por favor: "))
+        y = int(input("Introduza la columna, por favor: "))
+        acierto =  disparo(tablero_maquina,tablero_disparo_usuario,x,y)
+        contador = contador + 1
+        if contador == 3:
+            ganar_auto = input("Deseas ganar la partida?")
+            if ganar_auto == "si":
+                for linea in range(len(tablero_maquina)):
+                    for letra in range(len(tablero_maquina[linea])):
+                        if tablero_maquina[linea][letra] in ("A","P","D","F"):
+                            tablero_maquina[linea][letra] = "X"
+        time.sleep(2)
+        if not hay_barcos(tablero_maquina):
+            break
+        if not acierto:
+            print("Es el turno de tu oponente")
+            time.sleep(1)
             os.system("cls")
-            x = int(input("Introduzca la fila, por favor: "))
-            y = int(input("Introduza la columna, por favor: "))
-            acierto =  disparo(tablero_maquina,tablero_disparo_usuario,x,y)
-            if not hay_barcos(tablero_maquina):
-                break
-            if not acierto:
-                print("Es el turno de tu oponente")
-                time.sleep(1)
-                os.system("cls")
-                break
-            time.sleep(3)
-            os.system("cls")
-        elif trampas == "no":
-            x = int(input("Introduzca la fila, por favor: "))
-            y = int(input("Introduza la columna, por favor: "))
-            acierto =  disparo(tablero_maquina,tablero_disparo_usuario,x,y)
-            if not hay_barcos(tablero_maquina):
-                break
-            if not acierto:
-                print("Es el turno de tu oponente")
-                time.sleep(1)
-                os.system("cls")
-                break
-            time.sleep(3)
-            os.system("cls")
-
+            break
+        time.sleep(3)
+        os.system("cls")
+   
     if not hay_barcos(tablero_maquina):
+        pprint.pprint(tablero_maquina)
+        time.sleep(3)
         print("Se acabó el juego. Ha batido a la máquina. Felicidades!")
         break
 

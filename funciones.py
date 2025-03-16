@@ -371,5 +371,5 @@ def hay_barcos(tablero):
     for fila in tablero:
         for celda in fila:
             if celda in ("A", "P", "F", "D"):
-                return True  # Hay al menos un barco, el juego sigue
-    return False  # No hay barcos, el juego termina
+                return True
+    return False 
