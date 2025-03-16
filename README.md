@@ -1,7 +1,7 @@
 # Proyecto Hundir La Flota
 ### Realizado por Iñigo López Ayala
 
-1. Archivo variables.py
+1. #### Archivo variables.py
 
     * La primera variable que definimos es el tamaño del tablero, siendo el número asignado el número de filas y columnas que poseerá el tablero 
         - En nuestro caso esta variable se ha asignado con el nombre de Tamano_tablero (10)
@@ -14,5 +14,12 @@
 
     * Este primer conjunto de variables que describe el número de barcos nos servirá para colocar los barcos en un tablero (en el del usuario)
 
-    * Para el tablero de la máquina deberemos definir
+    * Para el tablero de la máquina deberemos definir variable de número de barcos de distinto nombre ya que si las definimos con el mismo nombre, cuando colocamos los barcos en el primer tablero, no quedarán barcos por colocar en el segundo. Se explicará esto más adelante en el apartado de funciones.
+
+2. #### Archivo funciones.py
+
+    * ##### Función de creación del tablero
+
+        * Esta función se define con un único argumento, siendo el tamaño del tablero (Tamano_tablero)
+        * Se crea una variable llamada tablero como una lista de listas en función de la variable Tama
 
