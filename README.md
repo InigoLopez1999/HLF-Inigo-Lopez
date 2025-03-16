@@ -114,7 +114,7 @@ Se crea un input que pregunta al usuario cómo desea colocar los barcos, manualm
 
 * Cada vez que un jugador falle, se romperá el bucle while True y se regresará al bucle que comprueba que queden barcos en alguno de los dos tableros, de manera que los disparos serán continuados hasta que alguien se quede sin barcos. Si se da el caso, el programa declarará el ganador y mediante un break romperá el while y se acabará el juego.
 
-* Nota: para agilizar el juego durante el día de la demo se ha incluido un input que pregunta al usuario si desea ver el tablero de la máquina para así poder acertar todos los disparos ya acabar antes la partida.
+* Nota: para agilizar el juego durante el día de la demo se ha incluido un input que pregunta al usuario tres turnos después del inicio de la partida si desea ganar la partida. En caso afirmativo, se sustituirán los barcos del tablero de la máquina por X, de manera que automáticamente será la victoria para el usuario.
 
             
 

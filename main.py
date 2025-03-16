@@ -99,6 +99,8 @@ while hay_barcos(tablero_nuevo) and hay_barcos(tablero_maquina):
         x = int(input("Introduzca la fila, por favor: "))
         y = int(input("Introduza la columna, por favor: "))
         acierto =  disparo(tablero_maquina,tablero_disparo_usuario,x,y)
+        if acierto:
+            continue
         contador = contador + 1
         if contador >=3:
             ganar_auto = input("Deseas ganar la partida?")
